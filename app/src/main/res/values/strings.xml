@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Super Note</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="enter_note_title">Enter Note Title</string>
+    <string name="enter_note">Enter Note</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+</resources>
