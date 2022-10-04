@@ -3,7 +3,6 @@ package com.herokuapp.abtik.mobilenotetakingapplication;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -33,13 +32,10 @@ public class MainActivity extends AppCompatActivity {
 
         noteViewModel = new ViewModelProvider.AndroidViewModelFactory(getApplication())
                 .create(NoteViewModel.class);
-        noteViewModel.getAllNotes().observe(this, new Observer<List<Note>>() {
-            @Override
-            public void onChanged(List<Note> notes) {
 
-                // update Recycler View
-                adapter.setNotes(notes);
-            }
+        noteViewModel.getAllNotes().observe(this, (List<Note> notes) -> {
+            // update Recycler View
+            adapter.setNotes(notes);
         });
 
         new ItemTouchHelper(new ItemTouchHelper
