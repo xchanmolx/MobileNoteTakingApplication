@@ -12,12 +12,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private NoteViewModel noteViewModel;
+    FloatingActionButton developer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +30,17 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setContentView(R.layout.activity_main);
 
+        developer = findViewById(R.id.floatingActionButtonDeveloper);
+
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         NoteAdapter adapter = new NoteAdapter();
         recyclerView.setAdapter(adapter);
+
+        developer.setOnClickListener((View v) -> {
+            Intent intent = new Intent(MainActivity.this, DevelopersActivity.class);
+            startActivity(intent);
+        });
 
         noteViewModel = new ViewModelProvider.AndroidViewModelFactory(getApplication())
                 .create(NoteViewModel.class);
@@ -48,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                     noteViewModel.delete(adapter.getNotes(viewHolder.getAdapterPosition()));
+                    Toast.makeText(getApplicationContext(), "Deleted note", Toast.LENGTH_LONG).show();
                 }
             }).attachToRecyclerView(recyclerView);
 

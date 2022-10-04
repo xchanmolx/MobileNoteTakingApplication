@@ -38,23 +38,27 @@
         <Button
             android:id="@+id/buttonCancel"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:backgroundTint="@color/teal_700"
             android:text="@string/cancel"
-            android:textColor="#000000" />
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
 
         <Button
             android:id="@+id/buttonSave"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:backgroundTint="@color/teal_700"
             android:text="@string/save"
-            android:textColor="#000000" />
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
     </LinearLayout>
 </LinearLayout>

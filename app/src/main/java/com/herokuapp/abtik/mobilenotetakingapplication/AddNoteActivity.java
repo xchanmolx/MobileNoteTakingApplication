@@ -45,5 +45,6 @@ public class AddNoteActivity extends AppCompatActivity {
         i.putExtra("noteDescription", noteDescription);
         setResult(RESULT_OK, i);
         finish();
+        Toast.makeText(getApplicationContext(), "Added new note", Toast.LENGTH_LONG).show();
     }
 }

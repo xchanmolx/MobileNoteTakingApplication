@@ -6,4 +6,17 @@
     <string name="enter_note">Enter Note</string>
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
+    <string name="developer">Developer</string>
+    <string name="list_developer">List of Developer</string>
+    <string name="csc_3111_mobile_application_development">CSC 3111: Mobile Application Development</string>
+    <string name="group_1_mobile_note_taking_application">(Group 1) Mobile Note-Taking Application</string>
+    <string-array name="developers">
+        <item>Manigos, Chiantine</item>
+        <item>Quijoy, Mirabel</item>
+        <item>Jabaybay, Belen</item>
+        <item>Elemino, Nelson</item>
+        <item>Guillano, Leonardo</item>
+        <item>Sochong, Jasper Kent</item>
+        <item>Galindo, Fhel Niño</item>
+    </string-array>
 </resources>

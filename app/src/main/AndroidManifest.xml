@@ -13,6 +13,13 @@
         android:theme="@style/Theme.MobileNoteTakingApplication"
         tools:targetApi="31">
         <activity
+            android:name=".DevelopersActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".UpdateActivity"
             android:exported="false">
             <meta-data
