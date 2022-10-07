@@ -36,7 +36,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButtonClose"
@@ -46,11 +47,11 @@
             android:layout_marginBottom="20dp"
             android:clickable="true"
             android:contentDescription="@string/cancel"
+            android:focusable="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_baseline_close_24"
-            tools:ignore="ImageContrastCheck"
-            android:focusable="true" />
+            tools:ignore="ImageContrastCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
